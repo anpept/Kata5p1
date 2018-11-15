@@ -6,9 +6,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class CreateTableApp {
-    public static void createNewTable() throws SQLException{
+    public static void createNewTable(String tableName) throws SQLException{
         String url ="jdbc:sqlite:Kata5.db";
-        String sql ="CREATE TABLE IF NOT EXISTS email (\n"
+        String sql ="CREATE TABLE IF NOT EXISTS "+tableName+" (\n"
                 + "id integer PRIMARY KEY AUTOINCREMENT,\n"
                 + "direccion TEXT NOT NULL);";
         
